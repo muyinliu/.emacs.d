@@ -1,0 +1,96 @@
+[submodule "site-lisp/multiple-cursors.el"]
+	path = site-lisp/multiple-cursors.el
+	url = https://github.com/magnars/multiple-cursors.el
+[submodule "site-lisp/visual-regexp-steroids.el"]
+	path = site-lisp/visual-regexp-steroids.el
+	url = https://github.com/muyinliu/visual-regexp-steroids.el
+[submodule "site-lisp/visual-regexp.el"]
+	path = site-lisp/visual-regexp.el
+	url = https://github.com/benma/visual-regexp.el
+[submodule "site-lisp/dash.el"]
+	path = site-lisp/dash.el
+	url = https://github.com/magnars/dash.el
+[submodule "site-lisp/company-mode"]
+	path = site-lisp/company-mode
+	url = https://github.com/company-mode/company-mode
+[submodule "site-lisp/use-package"]
+	path = site-lisp/use-package
+	url = https://github.com/jwiegley/use-package
+[submodule "site-lisp/slime-repl-ansi-color"]
+	path = site-lisp/slime-repl-ansi-color
+	url = https://github.com/deadtrickster/slime-repl-ansi-color
+[submodule "site-lisp/slime-company"]
+	path = site-lisp/slime-company
+	url = https://github.com/anwyn/slime-company
+[submodule "site-lisp/move-lines"]
+	path = site-lisp/move-lines
+	url = https://github.com/targzeta/move-lines
+[submodule "site-lisp/duplicate-thing"]
+	path = site-lisp/duplicate-thing
+	url = https://github.com/ongaeshi/duplicate-thing
+[submodule "site-lisp/smartparens"]
+	path = site-lisp/smartparens
+	url = https://github.com/Fuco1/smartparens
+[submodule "site-lisp/browse-url-dwim"]
+	path = site-lisp/browse-url-dwim
+	url = https://github.com/rolandwalker/browse-url-dwim
+[submodule "site-lisp/osx-browse"]
+	path = site-lisp/osx-browse
+	url = https://github.com/rolandwalker/osx-browse
+[submodule "site-lisp/tabbar"]
+	path = site-lisp/tabbar
+	url = https://github.com/dholm/tabbar
+[submodule "site-lisp/buffer-move"]
+	path = site-lisp/buffer-move
+	url = https://github.com/lukhas/buffer-move
+[submodule "site-lisp/nyan-mode"]
+	path = site-lisp/nyan-mode
+	url = https://github.com/TeMPOraL/nyan-mode
+[submodule "site-lisp/rainbow-mode"]
+	path = site-lisp/rainbow-mode
+	url = https://github.com/emacsmirror/rainbow-mode
+[submodule "site-lisp/rainbow-delimiters"]
+	path = site-lisp/rainbow-delimiters
+	url = https://github.com/Fanael/rainbow-delimiters
+[submodule "site-lisp/auto-highlight-symbol"]
+	path = site-lisp/auto-highlight-symbol
+	url = https://github.com/gennad/auto-highlight-symbol
+[submodule "site-lisp/expand-region.el"]
+	path = site-lisp/expand-region.el
+	url = https://github.com/magnars/expand-region.el
+[submodule "site-lisp/parinfer-mode"]
+	path = site-lisp/parinfer-mode
+	url = https://github.com/DogLooksGood/parinfer-mode
+[submodule "site-lisp/imenu-anywhere"]
+	path = site-lisp/imenu-anywhere
+	url = https://github.com/vspinu/imenu-anywhere
+[submodule "site-lisp/helm"]
+	path = site-lisp/helm
+	url = https://github.com/emacs-helm/helm
+[submodule "site-lisp/emacs-async"]
+	path = site-lisp/emacs-async
+	url = https://github.com/jwiegley/emacs-async
+[submodule "site-lisp/cnfonts"]
+	path = site-lisp/cnfonts
+	url = https://github.com/tumashu/cnfonts
+[submodule "site-lisp/org-bullets"]
+	path = site-lisp/org-bullets
+	url = https://github.com/sabof/org-bullets
+[submodule "site-lisp/nlinum"]
+	path = site-lisp/nlinum
+	url = https://github.com/emacsmirror/nlinum
+[submodule "site-lisp/clojure-mode"]
+	path = site-lisp/clojure-mode
+	url = https://github.com/clojure-emacs/clojure-mode
+[submodule "site-lisp/spinner.el"]
+	path = site-lisp/spinner.el
+	url = https://github.com/Malabarba/spinner.el
+[submodule "site-lisp/cider"]
+	path = site-lisp/cider
+	url = https://github.com/clojure-emacs/cider
+[submodule "site-lisp/queue"]
+	path = site-lisp/queue
+	url = https://github.com/emacsmirror/queue
+[submodule "site-lisp/markdown-mode"]
+	path = site-lisp/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode
