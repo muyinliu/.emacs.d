@@ -11,7 +11,10 @@
          ("M-s q"   . er/mark-inside-quotes)
          ("M-s M-q" . er/mark-outside-quotes)
          ("M-s d"   . er/mark-defun)
-         ("M-s c"   . er/mark-comment)))
+         ("M-s c"   . er/mark-comment)
+         ("M-s v"   . er/mark-symbol)
+         ("M-s M-v" . er/mark-symbol-with-prefix)
+         ("M-s w"   . er/mark-word)))
 
 
 ;; multiple-cursors.el(功能超级强大的多光标编辑扩展)
