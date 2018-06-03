@@ -12,6 +12,30 @@
 (global-set-key (kbd "C-S-<tab>") 'tabbar-backward)
 (global-set-key (kbd "C-x m")     'tabbar-move-current-buffer-to-new-frame)
 
+(defun current-path-to-clipboard ()
+  "Copy the current buffer file path to the clipboard."
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (kill-new filename)
+      (message "Copied buffer path '%s' to the clipboard." filename))))
+
+(global-set-key (kbd "C-c p") 'current-path-to-clipboard)
+
+(defun current-filename-to-clipboard ()
+  "Copy the current buffer filename to the clipboard."
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      (dired-get-filename)
+                    (or (file-name-nondirectory (buffer-file-name)) ""))))
+    (when filename
+      (kill-new filename)
+      (message "Copied buffer file name '%s' to the clipboard." filename))))
+
+(global-set-key (kbd "C-c f") 'current-filename-to-clipboard)
+
 ;; swap buffers
 (defun swap-buffer-window ()
   "Put the buffer from the selected window in next window, and vice versa"
