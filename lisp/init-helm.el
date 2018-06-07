@@ -13,6 +13,9 @@
   :bind (("C-." . helm-imenu)
          ("C-," . helm-imenu-anywhere)
          ("C-/" . helm-imenu-in-all-buffers)))
+(use-package helm-ring
+  :bind (("C-S-j" . helm-all-mark-rings)))
+(global-set-key (kbd "C-S-m") '(lambda () (interactive) (push-mark)))
 (use-package helm-files)
 (use-package helm-find)
 (use-package helm-for-files)
