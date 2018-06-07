@@ -153,8 +153,8 @@
   :config (browse-url-dwim-mode 1)
   :init
   (setq browse-url-dwim-always-confirm-extraction nil)
-  :bind (("A-b" . browse-url-dwim)
-         ("C-c b" . browse-url-dwim))) ;; Command + b to open URL in Safari
+  :bind (("A-b" . browse-url-dwim)     ;; Command + b to open URL in Safari
+         ("C-c b" . browse-url-dwim)))
 
 
 ;; 在状态条上显示当前光标在哪个函数体内部   
