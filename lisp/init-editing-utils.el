@@ -78,7 +78,10 @@
 
 ;; 智能缩进
 ;; (electric-indent-mode t)
-(setq lisp-indent-function 'common-lisp-indent-function)
+;; Note: only common-lisp-mode use common-lisp-indent-function
+(add-hook 'common-lisp-mode-hook
+          (lambda ()
+            (setq lisp-indent-function 'common-lisp-indent-function)))
 
 
 ;; 查找并替换
