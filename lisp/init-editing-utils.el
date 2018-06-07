@@ -6,7 +6,7 @@
 ;;; Selection
 ;; Extension of selection(mark) Expand-region
 (use-package expand-region
-  :bind (("M-s s"   . er/mark-inside-pairs)
+  :bind (("M-s s"   . er/mark-inside-pairs)   ;; s of M-s stands for "select"
          ("M-s M-s" . er/mark-outside-pairs)
          ("M-s q"   . er/mark-inside-quotes)
          ("M-s M-q" . er/mark-outside-quotes)
