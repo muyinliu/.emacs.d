@@ -7,8 +7,21 @@
 ;; use y/n to replace yes/no answer
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; disable temp files
-(setq-default make-backup-files nil)
+;; disable backup~ or backup~9~ files
+(setq make-backup-files nil)
+
+;; config #autosave# files
+;;   note: .#autosave only tells other emacs which emacs own file `autosave`
+;;   note: use recover-file to restore #autosave# files, will use ~/.emacs.d/auto-save-list/.saves-<N>-localhost~ to find recover files
+;;   note:                               
+(setq auto-save-interval 60) ;; default: 300 keystrokes
+(setq auto-save-timeout 20)  ;; default: 30s
+(setq auto-save-file-directory
+      (expand-file-name "auto-save-list/" user-emacs-directory))
+(setq auto-save-file-name-transforms
+      `((".*" ,auto-save-file-directory t)))
+(setq auto-save-list-file-prefix
+      auto-save-file-directory)
 
 ;; Disabled `Options have changed — save them? (y or n)` on Aquamacs
 (when (boundp 'aquamacs-save-options-on-quit)
