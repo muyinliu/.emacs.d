@@ -26,7 +26,6 @@
 (add-hook 'helm-before-initialize-hook
           #'(lambda () (helm-attrset 'follow 1 helm-source-grep)))
 
-;; use TAB as auto complete key
 (global-set-key (kbd "M-x") 'helm-M-x) ;; prefix argument fix: M-x slime M-- RET
 (setq helm-M-x-fuzzy-match t) ;; 启用模糊匹配
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
