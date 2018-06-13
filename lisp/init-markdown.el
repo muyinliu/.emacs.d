@@ -9,7 +9,8 @@
           (add-hook 'markdown-mode-hook
                     (lambda ()
                       (setq buffer-face-mode-face '(:family "Monaco" :height 1.1))
-                      (buffer-face-mode))))
+                      (buffer-face-mode)
+                      (auto-fill-mode 0))))
   :config (if (console-p)
               (custom-set-faces
                '(markdown-header-face ((t (:inherit font-lock-function-name-face
