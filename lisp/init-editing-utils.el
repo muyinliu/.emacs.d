@@ -125,10 +125,14 @@
          ("C-S-M-k"  . sp-backward-kill-sexp)
          ("C-x j"    . sp-forward-slurp-sexp)
          ("C-x l"    . sp-backward-slurp-sexp)
+         ;; spit first sexp inside (
          ("C-x J"    . sp-backward-barf-sexp)
+         ;; spit last sexp inside (
          ("C-x L"    . sp-forward-barf-sexp)
-         ("C-x M-l"  . sp-absorb-sexp) ;; eat sexp in
-         ("C-x M-j"  . sp-emit-sexp)   ;; spit sexp out
+         ;; eat sexp before outer ( into current cursor
+         ("C-x M-l"  . sp-absorb-sexp)
+         ;; spit sexp before current cursor out before (, not include first sexp
+         ("C-x M-j"  . sp-emit-sexp)
          ("C-x ["    . sp-rewrap-sexp) ;; change bracket () or []
          ("C-x ("    . sp-unwrap-sexp) ;; kill bracket near by
          ("C-x )"    . sp-backward-unwrap-sexp)
