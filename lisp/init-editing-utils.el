@@ -127,8 +127,8 @@
          ("C-x l"    . sp-backward-slurp-sexp)
          ("C-x J"    . sp-backward-barf-sexp)
          ("C-x L"    . sp-forward-barf-sexp)
-         ("C-x M-j"  . sp-absorb-sexp) ;; eat sexp in
-         ("C-x M-l"  . sp-emit-sexp)   ;; spit sexp out
+         ("C-x M-l"  . sp-absorb-sexp) ;; eat sexp in
+         ("C-x M-j"  . sp-emit-sexp)   ;; spit sexp out
          ("C-x ["    . sp-rewrap-sexp) ;; change bracket () or []
          ("C-x ("    . sp-unwrap-sexp) ;; kill bracket near by
          ("C-x )"    . sp-backward-unwrap-sexp)
