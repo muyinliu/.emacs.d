@@ -94,3 +94,6 @@
 [submodule "site-lisp/markdown-mode"]
 	path = site-lisp/markdown-mode
 	url = https://github.com/jrblevin/markdown-mode
+[submodule "site-lisp/unicode-graph-mode"]
+	path = site-lisp/unicode-graph-mode
+	url = https://github.com/muyinliu/unicode-graph-mode.git
