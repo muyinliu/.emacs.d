@@ -70,8 +70,9 @@
 
 ;; golden-ratio-scroll-screen
 (use-package golden-ratio-scroll-screen
-  :config
-  (global-set-key [remap scroll-down-command] 'golden-ratio-scroll-screen-down)
-  (global-set-key [remap scroll-up-command] 'golden-ratio-scroll-screen-up))
+  :bind (("C-v"     . golden-ratio-scroll-screen-up)
+         ("M-v"     . golden-ratio-scroll-screen-down)
+         ("<next>"  . golden-ratio-scroll-screen-up)
+         ("<prior>" . golden-ratio-scroll-screen-down)))
 
 (provide 'init-buffer)
