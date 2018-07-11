@@ -20,7 +20,8 @@
            `(markdown-code-face ((t (:inherit 'font-lock-function-name-face
                                               :foreground ,(if (console-p)
                                                                "White"
-                                                             "Black")))))
+                                                             "Black")
+                                              :height 1))))
            '(markdown-inline-code-face ((t (:inherit font-lock-constant-face
                                                      :foreground "#FF8000"))))
            `(markdown-table-face ((t (:inherit 'font-lock-constant-face
