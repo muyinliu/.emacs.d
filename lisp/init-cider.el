@@ -30,9 +30,9 @@
 
 (use-package cider
   :commands (cider-mode cider-connect cider-jack-in)
-  :bind (:map
-         cider-repl-mode-map
-         ("C-c M-o" . cider-repl-clear-buffer)))
+  :bind (:map cider-repl-mode-map
+         ("C-c M-o" . cider-repl-clear-buffer)
+         ("A-k" . cider-repl-clear-buffer)))
 
 
 (provide 'init-cider)
