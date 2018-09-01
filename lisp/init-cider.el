@@ -29,7 +29,7 @@
   (set-face-foreground 'font-lock-type-face "#E76007")) ;; orange
 
 (use-package cider
-  :commands (cider-mode)
+  :commands (cider-mode cider-connect cider-jack-in)
   :bind (:map
          cider-repl-mode-map
          ("C-c M-o" . cider-repl-clear-buffer)))
