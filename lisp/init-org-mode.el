@@ -77,6 +77,11 @@ Do not change habits, scheduled items or repeating todos."
   (setq org-log-done 'time)
   :bind (("C-c c" . org-capture)))
 
+;; Compatible with newer version 9+ of org-mode
+(unless (boundp 'org-block-background)
+  (defface org-block-background '((t ()))
+    "Face used for the source block background."))
+
 ;; 用 Unicode 符号高亮显示 titles 标志
 (use-package org-bullets
   :init
