@@ -7,17 +7,21 @@
                                (setq truncate-lines nil)))
   (org-babel-do-load-languages
    'org-babel-load-languages
-   '((lisp . t)
-     (sh . t)
-     (python . t)
-     (R . t)
-     (ruby . t)
-     (ditaa . t)
-     (dot . t)
-     (octave . t)
-     (sqlite . t)
-     (perl . t)
-     (C . t)))
+   (append
+    '((lisp . t)
+      (python . t)
+      (R . t)
+      (ruby . t)
+      (ditaa . t)
+      (dot . t)
+      (octave . t)
+      (sqlite . t)
+      (perl . t)
+      (C . t))
+    ;; Compatible with newer version v8.2.5+ of org-mode
+    (if (require 'ob-shell nil 'noerror)
+        '((shell . t))
+      '((sh . t)))))
   (setq org-capture-templates
         '(("t" "Todo" entry (file+headline "~/org/task.org" "Tasks")
            "* TODO %?\n %i\n %a")
