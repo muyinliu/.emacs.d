@@ -100,3 +100,6 @@
 [submodule "site-lisp/golden-ratio-scroll-screen"]
 	path = site-lisp/golden-ratio-scroll-screen
 	url = https://github.com/jixiuf/golden-ratio-scroll-screen
+[submodule "site-lisp/emacs-nlinum-hl"]
+	path = site-lisp/emacs-nlinum-hl
+	url = https://github.com/hlissner/emacs-nlinum-hl.git

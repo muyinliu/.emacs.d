@@ -18,7 +18,26 @@
   :bind (("M-A-l" . nlinum-mode)
          ("C-M-l" . nlinum-mode)
          ("C-x M-A-l" . global-nlinum-mode)
-         ("C-x C-M-l" . global-nlinum-mode)))
+         ("C-x C-M-l" . global-nlinum-mode))
+  :config
+  ;; for fix bug of nlinum-mode
+  (require 'nlinum-hl)
+  ;; A shotgun approach that refreshes line numbers on a regular basis:
+  ;; Runs occasionally, though unpredictably
+  (add-hook 'post-gc-hook #'nlinum-hl-flush-all-windows)
+  ;; whenever Emacs loses/gains focus
+  (add-hook 'focus-in-hook  #'nlinum-hl-flush-all-windows)
+  (add-hook 'focus-out-hook #'nlinum-hl-flush-all-windows)
+  ;; ...or switches windows
+  (advice-add #'select-window :before #'nlinum-hl-do-select-window-flush)
+  (advice-add #'select-window :after  #'nlinum-hl-do-select-window-flush)
+  ;; after X amount of idle time
+  (run-with-idle-timer 5 t #'nlinum-hl-flush-window)
+  (run-with-idle-timer 30 t #'nlinum-hl-flush-all-windows)
+  ;; With `markdown-fontify-code-blocks-natively' enabled in `markdown-mode',
+  ;; line numbers tend to vanish next to code blocks.
+  (advice-add #'markdown-fontify-code-block-natively
+              :after #'nlinum-hl-do-markdown-fontify-region))
 
 ;; 高亮匹配的括号
 (font-lock-add-keywords 'lisp-mode '("[(]" "[)]"))
