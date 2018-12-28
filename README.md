@@ -24,6 +24,7 @@ link `~/.emacs.d` as Aquamacs' config with commands:
 ```shell
 mv ~/Library/Preferences/Aquamacs\ Emacs/Packages ~/Library/Preferences/Aquamacs\ Emacs/Packages.bak
 ln -s ~/.emacs.d ~/Library/Preferences/Aquamacs\ Emacs/Packages
+mv ~/Library/Preferences/Aquamacs\ Emacs/Preferences.el ~/Library/Preferences/Aquamacs\ Emacs/Preferences.el.bak
 ln -s ~/.emacs.d/init.el ~/Library/Preferences/Aquamacs\ Emacs/Preferences.el
 ```
 
