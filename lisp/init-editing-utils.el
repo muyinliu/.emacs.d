@@ -100,6 +100,8 @@
          ("C-r"   . vr/isearch-backward)  ;; C-M-r
          ("C-s"   . vr/isearch-forward))  ;; C-M-s
   :config
+  ;; do not ignore case when paste to search input field(default value 'not-yanks)
+  (setf search-upper-case t)
   (when (console-p)
     (set-face-foreground 'vr/match-0 "black")))
 
