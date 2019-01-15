@@ -34,12 +34,24 @@
 
 (global-set-key (kbd "C-h v") 'helm-apropos)
 (setq helm-apropos-fuzzy-match t)
-(global-set-key (kbd "C-x p") 'helm-browse-project)
+(global-set-key (kbd "C-x B") 'helm-browse-project)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 ;; find file recursively by name(include sub dirs)
 (global-set-key (kbd "C-x C-S-f") 'helm-find)
 ;; find file recursively by content(include sub dirs)
-(global-set-key (kbd "C-x a g") 'helm-do-grep-ag)
+(global-set-key (kbd "C-x a G") 'helm-do-grep-ag)
+
+(require 'helm-projectile)
+(use-package helm-projectile
+  :bind (;; switch project
+         ("C-x p" . helm-projectile-switch-project)
+         ;; find file recursively by content(include sub dirs) in current project
+         ("C-x a g" . helm-projectile-ag)
+         ;; find file recursively by filename(include sub dirs) in current project
+         ("C-x C-S-f" . helm-projectile-find-file))
+  :config
+  (setq projectile-completion-system 'helm)
+  (helm-projectile-on))
 
 (global-set-key (kbd "C-x f") 'helm-recentf) ;; recent open file
 (setf recentf-max-saved-items 150)
