@@ -67,7 +67,7 @@
   (set-face-foreground 'rainbow-delimiters-depth-4-face "Blue")
   (set-face-foreground 'rainbow-delimiters-depth-5-face "Cyan")
   (set-face-foreground 'rainbow-delimiters-depth-6-face "Magenta")
-  (set-face-foreground 'rainbow-delimiters-depth-7-face "windowFrameColor")
+  (set-face-foreground 'rainbow-delimiters-depth-7-face "Brown")
   (set-face-foreground 'rainbow-delimiters-depth-8-face "Red")
   (set-face-foreground 'rainbow-delimiters-depth-9-face "#009300"))
 
