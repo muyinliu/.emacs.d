@@ -51,7 +51,8 @@
          ("C-x C-S-f" . helm-projectile-find-file))
   :config
   (setq projectile-completion-system 'helm)
-  (helm-projectile-on))
+  (helm-projectile-on)
+  (projectile-mode))
 
 (global-set-key (kbd "C-x f") 'helm-recentf) ;; recent open file
 (setf recentf-max-saved-items 150)
