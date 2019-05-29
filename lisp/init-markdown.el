@@ -21,7 +21,7 @@
                                               :foreground ,(if (console-p)
                                                                "White"
                                                              "Black")
-                                              :height 1))))
+                                              :height 0.9))))
            '(markdown-inline-code-face ((t (:inherit font-lock-constant-face
                                                      :foreground "#FF8000"))))
            `(markdown-table-face ((t (:inherit 'font-lock-constant-face
