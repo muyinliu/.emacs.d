@@ -6,3 +6,4 @@ eshell/
 SessionDesktop.el
 bookmarks
 projectile-bookmarks.eld
+.mc-lists.el
