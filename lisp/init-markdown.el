@@ -29,7 +29,7 @@
                                                                 "White"
                                                               "Black")
                                                :family "Menlo"
-                                               :height 1))))
+                                               :height 1.0))))
            '(markdown-bold-face ((t (:inherit bold :weight bold :family "Menlo"))))))
 
 (provide 'init-markdown)
