@@ -34,7 +34,7 @@ If you want to use [SLIME](https://github.com/slime/slime), the Superior Common 
 
 * Common Lisp Implementation, eg. [SBCL](http://www.sbcl.org)/[CCL](https://ccl.clozure.com)/[ECL](https://common-lisp.net/project/ecl/)/...
 * [QuickLisp](http://www.quicklisp.org)
-* [SLIME](https://github.com/slime/slime) installed with `(ql:quickload 'slime)` in Common Lisp REPL
+* [SLIME](https://github.com/slime/slime) installed with `(ql:quickload 'swank)` in Common Lisp REPL
 
 Run `slime` on Emacs will run SLIME REPL
 
