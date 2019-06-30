@@ -52,7 +52,6 @@
   :load-path quicklisp-slime-directory
   :commands (slime slime-connect)
   :init
-  (setq inferior-lisp-program "/usr/local/bin/sbcl -K utf-8")
   ;; Use `M-- M-x slime` to choose slime-lisp-implementations before slime run
   (setq slime-lisp-implementations
         '((sbcl ("sbcl" "--dynamic-space-size" "5120") :coding-system utf-8-unix)
