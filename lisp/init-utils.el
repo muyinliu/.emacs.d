@@ -61,7 +61,8 @@
 ;;----------------------------------------------------------------------------
 (defun rename-this-file-and-buffer (new-name)
   "Renames both current buffer and file it's visiting to NEW-NAME."
-  (interactive "sNew name: ")
+  (interactive (list (read-string "New name: "
+                                  (file-name-nondirectory (buffer-file-name)))))
   (let ((name (buffer-name))
         (filename (buffer-file-name)))
     (unless filename
@@ -72,7 +73,8 @@
         (when (file-exists-p filename)
          (rename-file filename new-name 1))
         (rename-buffer new-name)
-        (set-visited-file-name new-name)))))
+        (set-visited-file-name new-name)
+        (set-buffer-modified-p nil)))))
 
 ;;----------------------------------------------------------------------------
 ;; Browse current HTML file
