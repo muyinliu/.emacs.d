@@ -38,6 +38,8 @@ If you want to use [SLIME](https://github.com/slime/slime), the Superior Common 
 
 Run `slime` on Emacs will run SLIME REPL
 
+Note: without `slime` installed will get a `Cannot open load file: No such file or directory, slime` when execute command `slime`
+
 ### Note for CIDER(Clojure)
 
 If you want to use [CIDER](https://github.com/clojure-emacs/cider), the Clojure Interactive Development Environment that Rocks for Emacs, you have to have [Leiningen](https://leiningen.org) or [Boot](http://boot-clj.com) installed, and please take a look at [Launch an nREPL server and client from Emacs](https://github.com/clojure-emacs/cider#launch-an-nrepl-server-and-client-from-emacs) and [Connect to a running nREPL server](https://github.com/clojure-emacs/cider#connect-to-a-running-nrepl-server)
