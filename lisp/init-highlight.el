@@ -74,7 +74,7 @@
 (require 'parinfer)
 (use-package parinfer
   :init
-  (setq parinfer-extensions '(defaults pretty-parens smart-tab))
+  (setq parinfer-extensions '(defaults pretty-parens smart-tab smart-yank))
   (add-hook 'clojure-mode-hook     #'parinfer-mode)
   (add-hook 'emacs-lisp-mode-hook  #'parinfer-mode)
   (add-hook 'common-lisp-mode-hook #'parinfer-mode)
