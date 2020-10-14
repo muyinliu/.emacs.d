@@ -32,4 +32,6 @@
                                                :height 0.9))))
            '(markdown-bold-face ((t (:inherit bold :weight bold :family "Menlo"))))))
 
+(use-package edit-indirect)
+
 (provide 'init-markdown)

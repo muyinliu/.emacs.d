@@ -112,3 +112,6 @@
 [submodule "site-lisp/helm-projectile"]
 	path = site-lisp/helm-projectile
 	url = https://github.com/bbatsov/helm-projectile.git
+[submodule "site-lisp/edit-indirect"]
+	path = site-lisp/edit-indirect
+	url = https://github.com/Fanael/edit-indirect.git
