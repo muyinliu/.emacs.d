@@ -54,7 +54,7 @@
   :init
   ;; Use `M-- M-x slime` to choose slime-lisp-implementations before slime run
   (setq slime-lisp-implementations
-        '((sbcl ("sbcl" "--dynamic-space-size" "5120") :coding-system utf-8-unix)
+        '((sbcl ("sbcl" "--dynamic-space-size" "2048") :coding-system utf-8-unix)
           (ccl ("ccl"))
           (ecl ("ecl"))
           (cmucl ("lisp" "-quiet"))
