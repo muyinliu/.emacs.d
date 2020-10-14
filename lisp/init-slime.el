@@ -59,8 +59,8 @@
           (ecl ("ecl"))
           (cmucl ("lisp" "-quiet"))
           (clisp ("clisp"))
-          (roswell ("ros" "dynamic-space-size=2000" "-Q" "-l" "~/.sbclrc" "run"))))
-  (setq slime-default-lisp 'roswell) ;; use roswell to manager common lisp's implementations
+          (roswell ("ros" "dynamic-space-size=2048" "-Q" "-l" "~/.sbclrc" "run"))))
+  (setq slime-default-lisp 'sbcl)
   (setf slime-startup-animation nil)
   (setq slime-repl-banner-function 'slime-startup-message-x)
   :config (slime-setup '(slime-fancy slime-repl-ansi-color slime-company))
