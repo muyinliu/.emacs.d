@@ -77,9 +77,12 @@ Do not change habits, scheduled items or repeating todos."
   ;; C-c C-t 之后就会在下方弹出一个 buffer 来显示，接着按对应的快捷键就可以切换到对应的状态
   ;; | 用于分割「未完成」和「完成」的状态列表
   ;; 括号里面的第一个字符为快捷键，! 表示切换到该状态要记录时间戳， @ 表示切换到该状态要询问描述，当需要同时使用 !@，要写成 @/!
-  
+
   (setq org-log-done 'time)
-  :bind (("C-c c" . org-capture)))
+  :bind (:map
+         org-mode-map
+         ("C-c S-<right>" . org-table-insert-column)
+         ("C-c c" . org-capture)))
 
 ;; Compatible with newer version 9+ of org-mode
 (unless (boundp 'org-block-background)
