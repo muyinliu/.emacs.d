@@ -1,5 +1,9 @@
 ;;;; buffer controls
 
+;; switch frames with Chinese input method
+(global-set-key (kbd "A-·") 'raise-next-frame)
+(global-set-key (kbd "A-～") 'raise-previous-frame)
+
 ;; make window larger
 (global-set-key (kbd "M-A-=") 'enlarge-window)
 ;; make window smaller
