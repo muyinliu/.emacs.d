@@ -39,7 +39,7 @@
 ;; find file recursively by name(include sub dirs)
 (global-set-key (kbd "C-x C-S-f") 'helm-find)
 ;; find file recursively by content(include sub dirs)
-(global-set-key (kbd "C-x a G") 'helm-do-grep-ag)
+(global-set-key (kbd "C-x a g") 'helm-do-grep-ag)
 
 (require 'helm-projectile)
 (use-package helm-projectile
