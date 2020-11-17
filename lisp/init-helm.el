@@ -55,7 +55,7 @@
   (projectile-mode))
 
 (global-set-key (kbd "C-x f") 'helm-recentf) ;; recent open file
-(setf recentf-max-saved-items 150)
+(setf recentf-max-saved-items 500)
 
 (global-set-key (kbd "S-SPC") 'helm-toggle-visible-mark) ;; or use C-@
 
