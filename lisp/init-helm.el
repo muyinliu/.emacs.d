@@ -44,11 +44,11 @@
 (require 'helm-projectile)
 (use-package helm-projectile
   :bind (;; switch project
-         ("C-x p" . helm-projectile-switch-project)
+         ("C-x p s" . helm-projectile-switch-project)
          ;; find file recursively by content(include sub dirs) in current project
-         ("C-x a g" . helm-projectile-ag)
+         ("C-x p a g" . helm-projectile-ag)
          ;; find file recursively by filename(include sub dirs) in current project
-         ("C-x C-S-f" . helm-projectile-find-file))
+         ("C-x p f" . helm-projectile-find-file))
   :config
   (setq projectile-completion-system 'helm)
   (helm-projectile-on)
