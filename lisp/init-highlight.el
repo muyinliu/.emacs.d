@@ -58,7 +58,8 @@
                        cider-repl-mode-hook
                        emacs-lisp-mode-hook
                        json-mode-hook
-                       js-mode-hook))
+                       js-mode-hook
+                       c++-mode-hook))
     (add-hook mode-hook 'rainbow-delimiters-mode))
   :config
   (set-face-foreground 'rainbow-delimiters-depth-1-face "#7F017F")
