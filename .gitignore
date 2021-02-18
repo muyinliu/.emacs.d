@@ -3,6 +3,8 @@ auto-save-list/
 ac-comphist.dat
 elpa/
 eshell/
+games/
+url/
 SessionDesktop.el
 bookmarks
 projectile-bookmarks.eld
