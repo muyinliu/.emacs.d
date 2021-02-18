@@ -54,6 +54,7 @@
 (use-package rainbow-delimiters
   :init
   (dolist (mode-hook '(lisp-mode-hook
+                       slime-repl-mode-hook
                        clojure-mode-hook
                        cider-repl-mode-hook
                        emacs-lisp-mode-hook
