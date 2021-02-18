@@ -84,7 +84,7 @@
 ;; 高亮同样的名称
 ;; auto-highlight-symbol(ahs, highlight and edit same symbol like Eclipse)
 (use-package auto-highlight-symbol
-  :commands (global-auto-highlight-symbol-mode)
+  :commands (global-auto-highlight-symbol-mode auto-highlight-symbol-mode)
   :bind (("C-x a h" . auto-highlight-symbol-mode)
          :map
          auto-highlight-symbol-mode-map
@@ -94,8 +94,7 @@
          ("M-f"   . ahs-forward))
   :config
   (add-to-list 'ahs-modes 'lisp-mode)
-  (add-to-list 'ahs-modes 'clojure-mode)
-  (global-auto-highlight-symbol-mode t))
+  (add-to-list 'ahs-modes 'clojure-mode))
 
 
 
