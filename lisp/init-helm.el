@@ -18,6 +18,16 @@
 (global-set-key (kbd "C-S-m") '(lambda () (interactive) (push-mark)))
 (use-package helm-files)
 (use-package helm-find)
+(use-package helm-locate
+  :init
+  (setq helm-locate-command
+        (case system-type
+          ('gnu/linux "locate -i -r %s")
+          ('berkeley-unix "locate -i %s")
+          ('windows-nt "es %s")
+          ('darwin "mdfind -name %s %s")
+          (t "locate %s")))
+  :bind (("C-x M-f" . helm-locate)))
 (use-package helm-for-files)
 
 (setq-default helm-follow-mode-persistent t)
