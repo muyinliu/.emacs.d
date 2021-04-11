@@ -12,9 +12,9 @@
                       (buffer-face-mode)
                       (auto-fill-mode 0))))
   :config (custom-set-faces
-           '(markdown-header-face ((t (:inherit font-lock-function-name-face
+           `(markdown-header-face ((t (:inherit font-lock-function-name-face
                                                 :weight bold
-                                                :foreground "#1524FB"
+                                                :foreground ,(if (console-p) "#0398FC" "#1524FB")
                                                 :family "Menlo"))))
            '(markdown-list-face ((t (:inherit markdown-markup-face :foreground "Purple"))))
            `(markdown-code-face ((t (:inherit 'font-lock-function-name-face
