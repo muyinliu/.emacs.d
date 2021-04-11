@@ -22,7 +22,7 @@
   :init
   (setq helm-locate-command
         (case system-type
-          ('gnu/linux "locate -i -r %s")
+          ('gnu/linux "locate %s -e --regex %s")
           ('berkeley-unix "locate -i %s")
           ('windows-nt "es %s")
           ('darwin "mdfind -name %s %s")
