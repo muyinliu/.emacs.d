@@ -80,3 +80,8 @@ Plugins included in configuration:
 * [CIDER](https://github.com/clojure-emacs/cider) The Clojure Interactive Development Environment that Rocks for Emacs
 * [queue](https://github.com/emacsmirror/queue) Queue data structure
 * [markdown-mode](https://github.com/jrblevin/markdown-mode) Emacs Markdown Mode
+* [parseedn](https://github.com/clojure-emacs/parseedn) EDN parser for Emacs Lisp
+* [pkg-info](https://github.com/emacsorphanage/pkg-info) Provide information about Emacs packages
+* [sesman](https://github.com/vspinu/sesman) Session manager for Emacs based IDEs
+* [a](https://github.com/plexus/a.el) Emacs Lisp functions for dealing with association lists and hash tables. Inspired by Clojure
+* [parseclj](https://github.com/clojure-emacs/parseclj) Clojure Parser for Emacs Lisp
