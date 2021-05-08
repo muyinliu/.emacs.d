@@ -115,3 +115,18 @@
 [submodule "site-lisp/edit-indirect"]
 	path = site-lisp/edit-indirect
 	url = https://github.com/Fanael/edit-indirect.git
+[submodule "site-lisp/parseedn"]
+	path = site-lisp/parseedn
+	url = https://github.com/clojure-emacs/parseedn.git
+[submodule "site-lisp/pkg-info"]
+	path = site-lisp/pkg-info
+	url = https://github.com/emacsorphanage/pkg-info.git
+[submodule "site-lisp/sesman"]
+	path = site-lisp/sesman
+	url = https://github.com/vspinu/sesman.git
+[submodule "site-lisp/a.el"]
+	path = site-lisp/a.el
+	url = https://github.com/plexus/a.el.git
+[submodule "site-lisp/parseclj"]
+	path = site-lisp/parseclj
+	url = https://github.com/clojure-emacs/parseclj.git
