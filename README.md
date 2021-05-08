@@ -44,6 +44,7 @@ Note: without `slime` installed will get a `Cannot open load file: No such file 
 
 If you want to use [CIDER](https://github.com/clojure-emacs/cider), the Clojure Interactive Development Environment that Rocks for Emacs, you have to have [Leiningen](https://leiningen.org) or [Boot](http://boot-clj.com) installed, and please take a look at [Launch an nREPL server and client from Emacs](https://github.com/clojure-emacs/cider#launch-an-nrepl-server-and-client-from-emacs) and [Connect to a running nREPL server](https://github.com/clojure-emacs/cider#connect-to-a-running-nrepl-server)
 
+-----------------------------------------------------------------
 ## Plugins
 
 Plugins included in configuration:
@@ -85,3 +86,8 @@ Plugins included in configuration:
 * [sesman](https://github.com/vspinu/sesman) Session manager for Emacs based IDEs
 * [a](https://github.com/plexus/a.el) Emacs Lisp functions for dealing with association lists and hash tables. Inspired by Clojure
 * [parseclj](https://github.com/clojure-emacs/parseclj) Clojure Parser for Emacs Lisp
+
+-----------------------------------------------------------------
+## license of cl-disruptor
+
+ISC(See LICENSE file for details).
