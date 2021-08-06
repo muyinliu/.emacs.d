@@ -32,7 +32,9 @@
   :commands (cider-mode cider-connect cider-jack-in)
   :bind (:map cider-repl-mode-map
          ("C-c M-o" . cider-repl-clear-buffer)
-         ("A-k" . cider-repl-clear-buffer)))
+         ("A-k" . cider-repl-clear-buffer)
+         :map cider-mode-map
+         ("C-M-x" . cider-eval-defun-at-point)))
 
 
 (provide 'init-cider)
