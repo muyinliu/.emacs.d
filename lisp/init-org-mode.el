@@ -1,6 +1,8 @@
 ;; org-mode
 
 (use-package org
+  :bind (:map org-mode-map
+         ("C-c M-q"  . org-fill-paragraph))
   :init
   (add-hook 'org-mode-hook #'(lambda ()
                                (linum-mode 0)
