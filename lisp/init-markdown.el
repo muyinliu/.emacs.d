@@ -10,7 +10,8 @@
                     (lambda ()
                       (setq buffer-face-mode-face '(:family "Monaco" :height 1.1))
                       (buffer-face-mode)
-                      (auto-fill-mode 0))))
+                      (auto-fill-mode 0)
+                      (setq word-wrap nil))))
   :config (custom-set-faces
            `(markdown-header-face ((t (:inherit font-lock-function-name-face
                                                 :weight bold
