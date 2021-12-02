@@ -105,6 +105,8 @@
   (when (console-p)
     (set-face-foreground 'vr/match-0 "black")))
 
+(global-set-key (kbd "C-x r v") 'revert-buffer)
+
 ;; smartparens(自动补全括号)
 (use-package smartparens-config
   :defer 2
