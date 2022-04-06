@@ -82,6 +82,9 @@
 (add-hook 'common-lisp-mode-hook
           (lambda ()
             (setq lisp-indent-function 'common-lisp-indent-function)))
+(add-hook 'javascript-mode-hook
+          (lambda ()
+            (setq js-indent-level 2)))
 
 
 ;; 查找并替换
