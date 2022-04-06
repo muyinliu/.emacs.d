@@ -93,6 +93,6 @@ Plugins included in configuration:
 * [parseclj](https://github.com/clojure-emacs/parseclj) Clojure Parser for Emacs Lisp
 
 -----------------------------------------------------------------
-## license of cl-disruptor
+## license of .emacs.d
 
 ISC(See LICENSE file for details).
