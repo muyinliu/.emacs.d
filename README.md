@@ -22,10 +22,15 @@ git submodule update
 link `~/.emacs.d` as Aquamacs' config with commands:
 
 ```shell
-mv ~/Library/Preferences/Aquamacs\ Emacs/Packages ~/Library/Preferences/Aquamacs\ Emacs/Packages.bak
-ln -s ~/.emacs.d ~/Library/Preferences/Aquamacs\ Emacs/Packages
-mv ~/Library/Preferences/Aquamacs\ Emacs/Preferences.el ~/Library/Preferences/Aquamacs\ Emacs/Preferences.el.bak
-ln -s ~/.emacs.d/init.el ~/Library/Preferences/Aquamacs\ Emacs/Preferences.el
+export AQUAMACS_PATH="$HOME/Library/Preferences/Aquamacs Emacs"
+mv "$AQUAMACS_PATH/Packages" "$AQUAMACS_PATH/Packages.bak"
+ln -s ~/.emacs.d "$AQUAMACS_PATH/Packages"
+mv "$AQUAMACS_PATH/Preferences.el" "$AQUAMACS_PATH/Preferences.el.bak"
+ln -s ~/.emacs.d/init.el "$AQUAMACS_PATH/Preferences.el"
+mv "$AQUAMACS_PATH/Recent Files.el" "$AQUAMACS_PATH/Recent Files.el.bak"
+ln -s ~/.emacs.d/recentf "$AQUAMACS_PATH/Recent Files.el"
+mv "$AQUAMACS_PATH/auto-save-list" "$AQUAMACS_PATH/auto-save-list.bak"
+ln -s ~/.emacs.d/auto-save-list "$AQUAMACS_PATH/auto-save-list"
 ```
 
 ### Note for SLIME(Common Lisp)
