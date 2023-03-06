@@ -73,7 +73,7 @@
   (require 'init-org-mode)      ;; 400ms
   (require 'init-markdown)
   (require 'init-unicode-graph-mode)
-  (require 'init-asm))
+  (require 'init-beancount))
 
 
 

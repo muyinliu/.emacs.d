@@ -130,3 +130,6 @@
 [submodule "site-lisp/parseclj"]
 	path = site-lisp/parseclj
 	url = https://github.com/clojure-emacs/parseclj.git
+[submodule "site-lisp/beancount-mode"]
+	path = site-lisp/beancount-mode
+	url = https://github.com/beancount/beancount-mode
