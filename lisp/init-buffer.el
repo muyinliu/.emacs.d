@@ -68,7 +68,7 @@
         (delq (current-buffer) 
               (remove-if-not 'buffer-file-name (buffer-list)))))
 
-;; nyan-mode(彩虹猫进度条)
+;; nyan-mode: progress bar in nyancat
 (use-package nyan-mode
   :config (nyan-mode 1))
 

@@ -27,11 +27,11 @@
   (setq org-capture-templates
         '(("t" "Todo" entry (file+headline "~/org/task.org" "Tasks")
            "* TODO %?\n %i\n %a")
-          ("j" "Journal" entry (file+datetree "~/org/journal.org") ;; 日记模板
-           "* %?\nEntered on %U\n\n"))) ;; %U 是精确到分钟的时间， %i\n %a
+          ("j" "Journal" entry (file+datetree "~/org/journal.org") ;; journal template
+           "* %?\nEntered on %U\n\n"))) ;; %U time in minute， %i\n %a
 
-  (global-hi-lock-mode 1) ;; 开启全局 hi-lock-mode
-  ;; 避免每次开启 hi lock mode 时询问是否需要高亮指定表达式
+  (global-hi-lock-mode 1) ;; enable global hi-lock-mode
+  ;; avoid prompt of highlight of specify expression when enable hi-lock-mode
   (setq hi-lock-file-patterns-policy #'(lambda (dummy) t))
   
   (defface unorder-list-lock-face '((t (:foreground "#FF0000"))) t)
@@ -72,11 +72,11 @@ Do not change habits, scheduled items or repeating todos."
                       (org-get-scheduled-time (point)))
             (org-todo "NEXT"))))))
   
-  ;; 不同状态的工作流
+  ;; different status of workflow
   (setq org-todo-keywords
         '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@/!)")
           (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")))
-  ;; C-c C-t 之后就会在下方弹出一个 buffer 来显示，接着按对应的快捷键就可以切换到对应的状态
+  ;; C-c C-t popup a buffer to show，and use shortcut key to switch to specific status
   ;; | 用于分割「未完成」和「完成」的状态列表
   ;; 括号里面的第一个字符为快捷键，! 表示切换到该状态要记录时间戳， @ 表示切换到该状态要询问描述，当需要同时使用 !@，要写成 @/!
 

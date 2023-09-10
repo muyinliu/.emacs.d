@@ -17,7 +17,7 @@
          ("M-s w"   . er/mark-word)))
 
 
-;; multiple-cursors.el(功能超级强大的多光标编辑扩展)
+;; multiple-cursors: multiple cursors
 (use-package multiple-cursors
   :bind (("A-C-c"   . mc/edit-lines)
          ("C->"     . mc/mark-next-like-this)
@@ -26,7 +26,7 @@
 
 
 (defun kill-line-till-next-not-whitespace ()
-  "删除行末到下一行第一个可见字符之间的所有不可见字符"
+  "delete from end of line to first visible character of next line"
   (interactive)
   (end-of-line)
   (kill-line)
@@ -36,7 +36,7 @@
 ;; delete current line hotkey (Eclipse's hotkey)
 (global-set-key (kbd "A-d") 'kill-whole-line)
 
-;; move-lines(上下移动当前行)
+;; move-lines: move current line up or down
 (use-package move-lines
   :bind (("C-c i"    . move-lines-up)
          ("M-<up>"   . move-lines-up)
@@ -72,11 +72,11 @@
 (global-set-key (kbd "C-RET") 'newline-without-break-of-line)
 
 
-;; 设置 Tab键 默认为 4个空格
+;; input 4 space when use Tab on keyboard
 (setq default-tab-width 4)
 (setq-default indent-tabs-mode nil)
 
-;; 智能缩进
+;; smart indent
 ;; (electric-indent-mode t)
 ;; Note: only common-lisp-mode use common-lisp-indent-function
 (add-hook 'common-lisp-mode-hook
@@ -87,7 +87,7 @@
             (setq js-indent-level 2)))
 
 
-;; 查找并替换
+;; find and replace
 ;; fix warning when opening Aquamacs 3.3dev(Emacs 25.0.5+) for visual-regexp:
 ;;   Warning (bytecomp): reference to free variable ‘regexp-string’
 ;;   Warning (bytecomp): reference to free variable ‘replace-string’
@@ -114,7 +114,7 @@
 
 (global-set-key (kbd "C-x r v") 'revert-buffer)
 
-;; smartparens(自动补全括号)
+;; smartparens: auto complete parentheses
 (use-package smartparens-config
   :defer 2
   :config
@@ -124,9 +124,10 @@
   (add-hook 'auto-dark-light-mode-hook
             #'(lambda ()
                 (set-face-foreground 'sp-pair-overlay-face "DarkBlue")))
+  ;; fix CSS indent after input {}, BUT NOT A PERFECT SOLUTION
   (sp-local-pair 'css-mode "{" nil :post-handlers '(:add "
     |
-")) ;; 修正 CSS 里面输入 {} 之后回车不正常缩进的情况(不完美的解决方法)
+"))
   (add-hook 'lisp-mode-hook       'smartparens-mode)
   (add-hook 'clojure-mode-hook    'smartparens-mode)
   (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
@@ -148,7 +149,7 @@
          ("C-x M-l"  . sp-absorb-sexp)
          ;; spit sexp before current cursor out before (, not include first sexp
          ("C-x M-j"  . sp-emit-sexp)
-         ("C-x ["    . sp-rewrap-sexp) ;; change bracket () or []
+         ("C-x ["    . sp-rewrap-sexp) ;; change bracket () or [], e.g. C-x [ [ switch to []
          ("C-x ("    . sp-unwrap-sexp) ;; kill bracket near by
          ("C-x )"    . sp-backward-unwrap-sexp)
          ("C-x ]"    . sp-splice-sexp) ;; kill outer bracket
@@ -160,7 +161,6 @@
          ("RET"      . newline-and-indent)))
 
 
-;;; 文档
 ;; Hyperspec(common lisp documentation)
 (global-set-key (kbd "C-c d") 'slime-hyperspec-lookup)
 (setq common-lisp-hyperspec-root "/usr/local/share/doc/HyperSpec/")
@@ -176,7 +176,7 @@
          ("C-c b" . browse-url-dwim)))
 
 
-;; 在状态条上显示当前光标在哪个函数体内部   
+;; show current function's name in status bar
 (which-function-mode t)
 
 

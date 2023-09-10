@@ -1,7 +1,7 @@
 
 (require 'package)
 
-;; MELPA(package manager, 添加之后就可以直接 M-x package-install 来安装扩展)
+;; MELPA: package manager, use M-x package-install to install packages
 (when (>= emacs-major-version 24)
   (add-to-list 'package-archives
                '("melpa" . "https://melpa.org/packages/") t)

@@ -41,7 +41,7 @@
           #'(lambda () (helm-attrset 'follow 1 helm-source-grep)))
 
 (global-set-key (kbd "M-x") 'helm-M-x) ;; prefix argument fix: M-x slime M-- RET
-(setq helm-M-x-fuzzy-match t) ;; 启用模糊匹配
+(setq helm-M-x-fuzzy-match t) ;; enable fuzzy match
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (setq helm-buffers-fuzzy-matching t)

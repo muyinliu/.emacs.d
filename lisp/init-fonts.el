@@ -1,9 +1,10 @@
 (require 'cnfonts)
 (use-package cnfonts
   :init
-  ;; 调整字体使得实现「中英等宽」（一个中文字符的宽度 == 2个英文字符的宽度）
+  ;; same width of both Chinese and English,
+  ;;   width of single Chinese character equal to 2 English characters
   (setq cnfonts-profiles '("default" "same-width" "other"))
-  ;; 修改 cfs 配置文件路径
+  ;; modified cfs config file path
   (setq cnfonts-profiles-directory
         (expand-file-name "cnfonts-config/" user-emacs-directory))
   (defun toggle-chinese-engligh-same-width-fonts ()
