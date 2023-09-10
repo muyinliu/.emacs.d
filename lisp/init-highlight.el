@@ -5,13 +5,26 @@
           #'(lambda ()
               (set-face-foreground 'font-lock-comment-face "#009300")))
 
+;; cursor color
+(add-hook 'auto-dark-dark-mode-hook
+          #'(lambda ()
+              (set-cursor-color "Red")))
+(add-hook 'auto-dark-light-mode-hook
+          #'(lambda ()
+              (set-cursor-color "Red")))
+
 ;; 高亮当前行
 (use-package hl-line
+  :init
+  (add-hook 'auto-dark-dark-mode-hook
+            #'(lambda ()
+                (set-face-background hl-line-face "gray20")))
+  (add-hook 'auto-dark-light-mode-hook
+            #'(lambda ()
+                (set-face-background hl-line-face "#E2E3E2")))
   :config
   (global-hl-line-mode 1)
-  (set-face-background hl-line-face (if (console-p)
-                                        "#262626"
-                                      "#E2E3E2")))
+  (set-face-background hl-line-face "#E2E3E2"))
 
 ;; 行号
 (use-package nlinum

@@ -73,8 +73,7 @@
   (require 'init-org-mode)      ;; 400ms
   (require 'init-markdown)
   (require 'init-unicode-graph-mode)
-  (require 'init-beancount))
-
+  (require 'init-auto-dark))    ;; Auto Dark Mode
 
 
 ;;----------------------------------------------------------------------------

@@ -133,3 +133,6 @@
 [submodule "site-lisp/beancount-mode"]
 	path = site-lisp/beancount-mode
 	url = https://github.com/beancount/beancount-mode
+[submodule "site-lisp/auto-dark-emacs"]
+	path = site-lisp/auto-dark-emacs
+	url = https://github.com/LionyxML/auto-dark-emacs.git

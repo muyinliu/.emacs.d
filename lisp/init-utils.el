@@ -94,4 +94,14 @@
 (defun console-p ()
   (not (image-type-available-p 'xpm)))
 
+(defun dark-theme-p ()
+  (or (equal 'dark
+             (frame-parameter nil 'background-mode))
+      (and (functionp 'auto-dark--is-dark-mode)
+           (auto-dark--is-dark-mode))))
+
+(defun aquamacs-p ()
+  (boundp 'aquamacs-version))
+
+
 (provide 'init-utils)

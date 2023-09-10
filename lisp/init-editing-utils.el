@@ -103,10 +103,14 @@
          ("C-r"   . vr/isearch-backward)  ;; C-M-r
          ("C-s"   . vr/isearch-forward))  ;; C-M-s
   :config
+  (add-hook 'auto-dark-dark-mode-hook
+            #'(lambda ()
+                (set-face-foreground 'vr/match-0 "Black")))
+  (add-hook 'auto-dark-light-mode-hook
+            #'(lambda ()
+                (set-face-foreground 'vr/match-0 "White")))
   ;; do not ignore case when paste to search input field(default value 'not-yanks)
-  (setf search-upper-case t)
-  (when (console-p)
-    (set-face-foreground 'vr/match-0 "black")))
+  (setf search-upper-case t))
 
 (global-set-key (kbd "C-x r v") 'revert-buffer)
 
@@ -114,6 +118,12 @@
 (use-package smartparens-config
   :defer 2
   :config
+  (add-hook 'auto-dark-dark-mode-hook
+            #'(lambda ()
+                (set-face-foreground 'sp-pair-overlay-face "#7F017F")))
+  (add-hook 'auto-dark-light-mode-hook
+            #'(lambda ()
+                (set-face-foreground 'sp-pair-overlay-face "DarkBlue")))
   (sp-local-pair 'css-mode "{" nil :post-handlers '(:add "
     |
 ")) ;; 修正 CSS 里面输入 {} 之后回车不正常缩进的情况(不完美的解决方法)
@@ -123,8 +133,6 @@
   (add-hook 'js-mode-hook         'smartparens-mode)
   (add-hook 'css-mode-hook        'smartparens-mode)
   (add-hook 'web-mode-hook        'smartparens-mode)
-  (when (console-p)
-    (set-face-foreground 'sp-pair-overlay-face "#7F017F"))
   :bind (("C-A-n"    . sp-next-sexp)
          ("C-A-p"    . sp-previous-sexp)
          ("C-A-a"    . sp-beginning-of-sexp)
