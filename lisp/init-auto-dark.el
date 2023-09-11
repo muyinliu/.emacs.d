@@ -6,7 +6,7 @@
     (setq auto-dark-light-theme 'aquamacs-autoface-frame-look))
   (add-hook 'auto-dark-dark-mode-hook
             #'(lambda ()
-                (set-background-color "#202125")))
+                (set-background-color "#181A26")))
   (add-hook 'auto-dark-light-mode-hook
             #'(lambda ()
                 (set-background-color "#FFFFFF")))

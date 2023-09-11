@@ -15,17 +15,17 @@
   (add-hook 'auto-dark-dark-mode-hook
             #'(lambda ()
                 (custom-set-faces
-                 `(markdown-header-face ((t (:inherit font-lock-function-name-face
+                 '(markdown-header-face ((t (:inherit font-lock-function-name-face
                                                       :weight bold
                                                       :foreground "#0398FC"
                                                       :family "Menlo"))))
                  '(markdown-list-face ((t (:inherit markdown-markup-face :foreground "Purple"))))
-                 `(markdown-code-face ((t (:inherit 'font-lock-function-name-face
+                 '(markdown-code-face ((t (:inherit font-lock-function-name-face
                                                     :foreground "White"
                                                     :height 0.9))))
                  '(markdown-inline-code-face ((t (:inherit font-lock-constant-face
                                                            :foreground "#FF8000"))))
-                 `(markdown-table-face ((t (:inherit 'font-lock-constant-face
+                 '(markdown-table-face ((t (:inherit font-lock-constant-face
                                                      :foreground "White"
                                                      :family "Menlo"
                                                      :height 0.9))))
@@ -33,17 +33,17 @@
   (add-hook 'auto-dark-light-mode-hook
             #'(lambda ()
                 (custom-set-faces
-                 `(markdown-header-face ((t (:inherit font-lock-function-name-face
+                 '(markdown-header-face ((t (:inherit font-lock-function-name-face
                                                       :weight bold
                                                       :foreground "#1524FB"
                                                       :family "Menlo"))))
                  '(markdown-list-face ((t (:inherit markdown-markup-face :foreground "Purple"))))
-                 `(markdown-code-face ((t (:inherit 'font-lock-function-name-face
+                 '(markdown-code-face ((t (:inherit font-lock-function-name-face
                                                     :foreground "Black"
                                                     :height 0.9))))
                  '(markdown-inline-code-face ((t (:inherit font-lock-constant-face
                                                            :foreground "#FF8000"))))
-                 `(markdown-table-face ((t (:inherit 'font-lock-constant-face
+                 '(markdown-table-face ((t (:inherit font-lock-constant-face
                                                      :foreground "Black"
                                                      :family "Menlo"
                                                      :height 0.9))))

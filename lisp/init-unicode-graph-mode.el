@@ -7,13 +7,21 @@
                 (custom-set-faces
                  `(unicode-graph-face ((t (:inherit 'font-lock-keyword-face
                                                     :family "Menlo"
-                                                    :foreground "White")))))))
+                                                    :foreground "White")))))
+                (custom-set-faces
+                 `(unicode-graph-rectangle-face ((t (:inherit 'font-lock-keyword-face
+                                                              :family "Menlo"
+                                                              :foreground "#4396F5")))))))
   (add-hook 'auto-dark-light-mode-hook
             #'(lambda ()
                 (custom-set-faces
                  `(unicode-graph-face ((t (:inherit 'font-lock-keyword-face
                                                     :family "Menlo"
-                                                    :foreground "Black")))))))
+                                                    :foreground "Black")))))
+                (custom-set-faces
+                 `(unicode-graph-rectangle-face ((t (:inherit 'font-lock-keyword-face
+                                                              :family "Menlo"
+                                                              :foreground "Blue")))))))
   :config (custom-set-faces
            `(unicode-graph-face ((t (:inherit 'font-lock-keyword-face
                                               :family "Menlo"

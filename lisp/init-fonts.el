@@ -1,6 +1,8 @@
 (require 'cnfonts)
 (use-package cnfonts
   :init
+  (set-face-attribute 'default nil
+                      :family "Monego")
   ;; same width of both Chinese and English,
   ;;   width of single Chinese character equal to 2 English characters
   (setq cnfonts-profiles '("default" "same-width" "other"))

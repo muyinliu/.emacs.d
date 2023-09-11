@@ -23,6 +23,14 @@
           #'(lambda ()
               (set-cursor-color "Red")))
 
+;; selected text color
+(add-hook 'auto-dark-dark-mode-hook
+          #'(lambda ()
+              (set-face-attribute 'region nil :background "#045418")))
+(add-hook 'auto-dark-light-mode-hook
+          #'(lambda ()
+              (set-face-attribute 'region nil :background "#B9D6FB")))
+
 ;; highlight current line
 (use-package hl-line
   :init

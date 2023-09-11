@@ -120,12 +120,6 @@
 (use-package smartparens-config
   :defer 2
   :config
-  (add-hook 'auto-dark-dark-mode-hook
-            #'(lambda ()
-                (set-face-foreground 'sp-pair-overlay-face "#7F017F")))
-  (add-hook 'auto-dark-light-mode-hook
-            #'(lambda ()
-                (set-face-foreground 'sp-pair-overlay-face "DarkBlue")))
   ;; fix CSS indent after input {}, BUT NOT A PERFECT SOLUTION
   (sp-local-pair 'css-mode "{" nil :post-handlers '(:add "
     |
