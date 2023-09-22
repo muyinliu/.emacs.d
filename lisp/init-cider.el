@@ -30,6 +30,9 @@
 
 (use-package cider
   :commands (cider-mode cider-connect cider-jack-in)
+  :config
+  (add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
+  (add-hook 'cider-mode-hook #'cider-company-enable-fuzzy-completion)
   :bind (:map cider-repl-mode-map
          ("C-c M-o" . cider-repl-clear-buffer)
          ("A-k" . cider-repl-clear-buffer)
