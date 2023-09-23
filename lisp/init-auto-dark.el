@@ -6,7 +6,13 @@
     (setq auto-dark-light-theme 'aquamacs-autoface-frame-look))
   (add-hook 'auto-dark-dark-mode-hook
             #'(lambda ()
-                (set-background-color "#181A26")))
+                (let ((class '((class color) (min-colors 89)))
+                      (background-color (if (console-p)
+                                            "black"
+                                          "#181A26")))
+                  (custom-theme-set-faces
+                   'deeper-blue
+                   `(default ((,class (:background ,background-color :foreground "gray80"))))))))
   (add-hook 'auto-dark-light-mode-hook
             #'(lambda ()
                 (set-background-color "#FFFFFF")))
