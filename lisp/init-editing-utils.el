@@ -96,6 +96,9 @@
 (defvar replace-string nil)
 (defvar regexp-string nil)
 (use-package visual-regexp-steroids
+  :init (add-hook 'isearch-update-post-hook
+                  #'(lambda ()
+                      (recenter)))
   :bind (("C-c r" . vr/replace)
          ("M-A-f" . vr/query-replace)
          ("C-c q" . vr/query-replace)
