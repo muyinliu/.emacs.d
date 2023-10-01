@@ -47,7 +47,8 @@
                                                      :foreground "Black"
                                                      :family "Menlo"
                                                      :height 0.9))))
-                 '(markdown-bold-face ((t (:inherit bold :weight bold :family "Menlo"))))))))
+                 '(markdown-bold-face ((t (:inherit bold :weight bold :family "Menlo")))))))
+  :bind (("C-S-b" . markdown-follow-link-at-point)))
 
 (use-package edit-indirect)
 
