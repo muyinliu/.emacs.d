@@ -47,8 +47,8 @@
   (set-face-attribute 'org-verbatim nil :bold t :foreground "Blue")
 
   (setq org-todo-keyword-faces
-        '(("TODO" . (:foreground "Red1" :bold t :box "#FF0000"))
-          ("DONE" . (:foreground "ForestGreen" :bold t :box "ForestGreen"))
+        '(("TODO" . (:foreground "Red1" :bold t))
+          ("DONE" . (:foreground "ForestGreen" :bold t))
           ("CANCELED" . (:foreground "#5A5A5A" :bold t :strike-through "#5A5A5A"))))
 
   (defun children-done-parent-done (n-done n-todo)
