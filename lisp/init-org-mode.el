@@ -1,8 +1,13 @@
 ;; org-mode
 
 (use-package org
-  :bind (:map org-mode-map
-         ("C-c M-q"  . org-fill-paragraph))
+  :bind (:map
+         org-mode-map
+         ("C-c M-q"  . org-fill-paragraph)
+         :map
+         org-mode-map
+         ("C-c S-<right>" . org-table-insert-column)
+         ("C-c c" . org-capture))
   :init
   (add-hook 'org-mode-hook #'(lambda ()
                                (linum-mode 0)
@@ -34,8 +39,8 @@
   ;; avoid prompt of highlight of specify expression when enable hi-lock-mode
   (setq hi-lock-file-patterns-policy #'(lambda (dummy) t))
   
-  (defface unorder-list-lock-face '((t (:foreground "#FF0000"))) t)
-  (defface order-list-lock-face '((t (:foreground "Blue"))) t)
+  (defface unorder-list-lock-face '((t (:foreground "#FF0000"))) "Face for unorder list")
+  (defface order-list-lock-face '((t (:foreground "Blue"))) "Face for order list")
   (defun list-highlight ()
     (interactive)
     (highlight-regexp "^\s*[-\\+\\*] " 'unorder-list-lock-face)
@@ -80,11 +85,7 @@ Do not change habits, scheduled items or repeating todos."
   ;; | 用于分割「未完成」和「完成」的状态列表
   ;; 括号里面的第一个字符为快捷键，! 表示切换到该状态要记录时间戳， @ 表示切换到该状态要询问描述，当需要同时使用 !@，要写成 @/!
 
-  (setq org-log-done 'time)
-  :bind (:map
-         org-mode-map
-         ("C-c S-<right>" . org-table-insert-column)
-         ("C-c c" . org-capture)))
+  (setq org-log-done 'time))
 
 ;; Compatible with newer version 9+ of org-mode
 (unless (boundp 'org-block-background)

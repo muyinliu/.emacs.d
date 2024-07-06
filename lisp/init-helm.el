@@ -3,12 +3,13 @@
 ;; helm(Emacs incremental completion and selection narrowing framework)
 (use-package helm
   :init
-  (add-hook 'auto-dark-dark-mode-hook
-            #'(lambda ()
-                (set-face-foreground 'helm-selection "Black")))
-  (add-hook 'auto-dark-light-mode-hook
-            #'(lambda ()
-                (set-face-foreground 'helm-selection "White"))))
+  (defun helm-selection-face-dark ()
+    (set-face-foreground 'helm-selection "Black"))
+  (defun helm-selection-face-light ()
+    (set-face-foreground 'helm-selection "White"))
+  (add-hook 'auto-dark-dark-mode-hook  'helm-selection-face-dark)
+  (add-hook 'auto-dark-light-mode-hook 'helm-selection-face-light))
+
 (use-package helm-command
   :config (helm-mode 1))
 (use-package helm-imenu
