@@ -94,10 +94,10 @@
                        c++-mode-hook))
     (add-hook mode-hook 'rainbow-delimiters-mode))
   :config
-  (set-face-foreground 'rainbow-delimiters-depth-1-face "#7F017F")
+  (set-face-foreground 'rainbow-delimiters-depth-1-face "purple1")
   (set-face-foreground 'rainbow-delimiters-depth-2-face "Orange")
   (set-face-foreground 'rainbow-delimiters-depth-3-face "Green")
-  (set-face-foreground 'rainbow-delimiters-depth-4-face "Blue")
+  (set-face-foreground 'rainbow-delimiters-depth-4-face "DodgerBlue1")
   (set-face-foreground 'rainbow-delimiters-depth-5-face "Cyan")
   (set-face-foreground 'rainbow-delimiters-depth-6-face "Magenta")
   (set-face-foreground 'rainbow-delimiters-depth-7-face "Brown")
