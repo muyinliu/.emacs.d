@@ -84,10 +84,12 @@
 (add-hook 'common-lisp-mode-hook
           (lambda ()
             (setq lisp-indent-function 'common-lisp-indent-function)))
-(add-hook 'javascript-mode-hook
-          (lambda ()
-            (setq js-indent-level 2)))
 
+(use-package js
+  :mode
+  ("\\.ts\\'" . js-mode)
+  :config
+  (setq js-indent-level 2))
 
 ;; find and replace
 ;; fix warning when opening Aquamacs 3.3dev(Emacs 25.0.5+) for visual-regexp:
