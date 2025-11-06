@@ -21,6 +21,17 @@
 
 ;; multiple-cursors: multiple cursors
 (use-package multiple-cursors
+  :init
+  (progn ;; toggle `cursor-type` to `'box` around multiple-cursors-mode
+    (defvar cursor-type-backup cursor-type)
+    (defun restore-cursor-type ()
+      (setq cursor-type cursor-type-backup))
+    (defun ensure-cursor-type-box (overlay)
+      (setq cursor-type 'box)
+      overlay)
+    (advice-add 'mc/make-cursor-overlay-at-eol :before #'ensure-cursor-type-box)
+    (advice-add 'mc/make-cursor-overlay-inline :before #'ensure-cursor-type-box)
+    (add-hook 'multiple-cursors-mode-disabled-hook #'restore-cursor-type))
   :bind (("A-C-c"   . mc/edit-lines)
          ("C->"     . mc/mark-next-like-this)
          ("C-<"     . mc/mark-previous-like-this)
