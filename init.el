@@ -59,7 +59,8 @@
   ;;----------------------------------------------------------------------------
   ;; Load configs for specific features and modes
   ;;----------------------------------------------------------------------------
-  (require 'use-package)
+  (when (version< emacs-version "29")
+    (require 'use-package))
   (require 'init-fix)           ;; startup-screen, bell and other things
   (require 'init-charset)       ;; coding-system charset
   (require 'init-editing-utils) ;; 150ms
